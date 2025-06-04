@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" xmls:"http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+    <div>
+        <header style="background-color: #f8f8f8;">
+            <h1>opaアプリへようこそ</h1>
+        </header>
+    </div>
+    <div th:fragment="footer">
+        <footer style="background-color: #f8f8f8; text-align: center;">
+            <p>&copy; 占いアプリ</p>
+        </footer>
+    </div>
+</body>
+</html>

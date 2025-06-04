@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ja",xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head(占いkekka)}"></head>
+    <body>
+        <div th:replace="~{layout :: header}"></div>
+        <p><span th:text="${name}"></span>さん(<span th:text="${age}"></span>)才の運勢は<span th:text="${result}">大吉</span>です。</p>
+    </body>
+        <div th:replace="~{layout :: footer}"></div>
+</html>
