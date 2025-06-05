@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head(todoリスト-タスクの編集)}"></head>
+<body>
+    <div th:replace="~{layout :: header}"></div>
+    <h3>タスク編集</h3>
+    <form th:action="@{/todo/{id}/edit(id=${todo.id})}" th:object="${todo}" method="post">
+        <div>
+           <label for="task">タスク：</label>
+           <input type="text" id="task" name="task" th:field="*{task}">
+        </div>
+        <div>
+            <label for="memo">メモ：</label>
+            <input type="text" id="memo" name="memo" th:field="*{memo}">
+        </div>
+        <div>
+            <label for="release-date">期限：</label>
+            <input type="datetime" id="deadline" name="deadline" th:field="*{deadline}">
+        </div>
+        <div>
+            <label for="importance">重要度：</label>
+            <input type="number" id="importance" name="importance" th:field="*{importance}" min="1" max="3">
+        </div>
+        <div>
+            <button type="submit">変更</button>
+        </div>
+    </form>
+    <div th:replace="~{layout :: footer}"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+header{
+    background-color: aqua;
+}
+
+footer{
+    background-color: aqua;
+}
+
+/* テーブル */
+table{
+    border-collapse: collapse;
+}
+
+table thead{
+    border-bottom: 1px solid #000;
+}
+
+table td, table th{
+    padding: 3px 10px;
+    border-right: 1px solid #000;
+}
+
+table td:last-child, table th:last-child{
+    border-right: none;
+}

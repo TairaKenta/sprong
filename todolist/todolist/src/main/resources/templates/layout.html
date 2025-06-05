@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html long="ja" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+    <title th:text="${title}">ToDoリスト</title>
+</head>
+<body>
+    <div th:fragment="header">
+        <header>
+            <h4>ToDoリスト</h4>
+        </header>
+    </div>
+
+    <div th:fragment="operation(action, text)">
+        <form th:action="${action}" method="get" style="text-align: right;">
+            <button type="submit"><span th:text="${text}">前の画面へ</span></button>
+        </form>
+    </div>
+
+    <div th:fragment="footer">
+        <footer style="text-align: center;">
+            <p>&copy; リーダーズ</p>
+        </footer>
+    </div>
+</body>
+</html>
